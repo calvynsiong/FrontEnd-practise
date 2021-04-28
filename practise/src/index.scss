@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto';
+	font-size: clamp(0.5rem, 1rem, 2rem);
+}
+section {
+	background: rgba(185, 243, 236, 0.609);
+	width: 90vw;
+	&.BookList {
+		max-width: 1170px;
+		margin: 5rem auto;
+		border-radius: 2em;
+		display: grid;
+		gap: 1rem;
+		@media (min-width: 768px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	:is(article, h1, h2, p) {
+		text-align: center;
+	}
+	article {
+		margin-top: 2rem;
+		display: flex;
+		align-items: center;
+	}
+
+	img {
+		width: Min(5rem, 100%);
+		height: Min(5rem, 100%);
+		max-width: 100%;
+		padding: -3em;
+	}
+	.book {
+		background: white;
+		display: flex;
+		flex-direction: column;
+		padding: 1rem 2rem;
+		border-radius: 1em;
+		margin: 1rem 1rem;
+		h1 {
+			margin-top: 0.5rem;
+		}
+		p {
+			margin-top: 1em;
+		}
+	}
+}
